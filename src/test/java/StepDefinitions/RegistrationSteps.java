@@ -16,8 +16,7 @@ import io.cucumber.java.en.*;
 public class RegistrationSteps{
 	
 	private WebDriver driver;
-	
-
+		
 	@Given("the user is on the Magento website")
 	public void the_user_is_on_the_magento_website() {
 		driver= DriverManager.getDriver();
@@ -63,6 +62,12 @@ public class RegistrationSteps{
 	@Then("the user should be successfully registered")
 	public void the_user_should_be_successfully_registered() {
 		Assert.assertTrue(driver.findElement(RegistrationPage.regSuccessMsg).isDisplayed());
+	}
+	
+	@Then("the user signs out")
+	public void the_user_signs_out() {
+		driver.findElement(HomePage.actions).click();
+		driver.findElement(HomePage.signOut).click();
 	}
 
 

@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions;
                 "json:target/JsonReports/Test.Json",
                 "junit:target/JunitReports/Test.xml"},
 		monochrome =true,
-		tags = "@Registration"
+		tags = "@test"
 )
 
 
