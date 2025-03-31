@@ -31,7 +31,6 @@ public class ReadExcel {
 	FileOutputStream fos = new FileOutputStream("src/main/resources/Data/AccountDetails.xlsx");
 	workbook.write(fos);
 	fos.close();
-	fs.close();
-	
+	fs.close();	
 	}
 }
