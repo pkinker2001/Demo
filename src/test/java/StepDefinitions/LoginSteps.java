@@ -3,7 +3,7 @@ package StepDefinitions;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
+import org.junit.Assert;
 
 import Pages.HomePage;
 import Pages.LoginPage;
@@ -55,12 +55,14 @@ public class LoginSteps{
 	}
 	
 	@When("the user should see the error message")
-	public void the_user_should_see_the_error_message() throws IOException {
+	public void the_user_should_see_the_error_message() throws IOException, InterruptedException {
+		Thread.sleep(10);
 		Assert.assertTrue(driver.findElement(LoginPage.errorMsg).isDisplayed());
 	}
 	
 	@When("the user should see the invalid email error message")
-	public void the_user_should_see_the_invalid_email_error_message() throws IOException {
+	public void the_user_should_see_the_invalid_email_error_message() throws IOException, InterruptedException {
+		Thread.sleep(10);
 		Assert.assertTrue(driver.findElement(LoginPage.emailErrorMsg).isDisplayed());
 	}
 

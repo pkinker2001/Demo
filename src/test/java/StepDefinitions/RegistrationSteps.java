@@ -3,7 +3,7 @@ package StepDefinitions;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
+import org.junit.Assert;
 
 import com.github.javafaker.Faker;
 

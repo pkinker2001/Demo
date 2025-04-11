@@ -5,6 +5,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+		dryRun = false,
 		glue= {"StepDefinitions"},
 		features= {"src/test/resources/Features"},
 		plugin= {"pretty", "html:target/HtmlReports/Test.html",
@@ -15,7 +16,7 @@ import io.cucumber.junit.CucumberOptions;
 )
 
 
-public class TestRunner {
+public class RunnerTest {
 
 
 
